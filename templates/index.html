@@ -1,0 +1,35 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>SemanticDocSearch</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 32px; }
+    #results { margin-top: 20px; }
+    .doc { border: 1px solid #ddd; padding: 12px; margin-bottom: 8px; border-radius: 6px; }
+    .score { font-size: 0.85em; color: #666; }
+    button { padding: 8px 12px; margin-left: 8px; }
+    textarea { width: 100%; height: 120px; }
+  </style>
+</head>
+<body>
+  <h1>SemanticDocSearch</h1>
+  <div>
+    <input id="query" type="text" size="60" placeholder="Enter your question or search phrase"/>
+    <button onclick="search()">Search</button>
+    <button onclick="generate()">Search + Generate (optional)</button>
+    <label>Top K:
+      <select id="topk">
+        <option value="3">3</option>
+        <option selected value="5">5</option>
+        <option value="10">10</option>
+      </select>
+    </label>
+  </div>
+
+  <div id="results"></div>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
